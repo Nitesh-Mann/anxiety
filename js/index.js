@@ -50,3 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// form //
+const btnDetails = document.getElementById("btn-details");
+const btnPayment = document.getElementById("btn-payment");
+const detailsForm = document.getElementById("details-form");
+const paymentSummary = document.getElementById("payment-summary");
+
+btnDetails.addEventListener("click", function () {
+  btnDetails.classList.add("active");
+  btnPayment.classList.remove("active");
+  detailsForm.classList.remove("d-none");
+  paymentSummary.classList.add("d-none");
+});
+
+btnPayment.addEventListener("click", function () {
+  btnPayment.classList.add("active");
+  btnDetails.classList.remove("active");
+  detailsForm.classList.add("d-none");
+  paymentSummary.classList.remove("d-none");
+});
